@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Azert Software 2017</copyright>
-    <lastBuildDate>Wed, 25 Jan 2017 13:05:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jan 2017 21:37:47 +0000</lastBuildDate>
     <atom:link href="http://www.azert.co.uk/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AppSec Europe 2017 Comes To Belfast</title>
+      <link>http://www.azert.co.uk/post/appsec-europe-2017-comes-to-belfast/</link>
+      <pubDate>Sun, 29 Jan 2017 21:37:47 +0000</pubDate>
+      
+      <guid>http://www.azert.co.uk/post/appsec-europe-2017-comes-to-belfast/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/29/A1_belfast_2017_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This year my home city Belfast will be hosting &lt;a href=&#34;https://2017.appsec.eu/&#34;&gt;AppSec Europe&lt;/a&gt;, one of, if not the biggest web security conference in Europe. This is setup by &lt;a href=&#34;https://www.owasp.org/index.php/Main_Page&#34;&gt;OWasp&lt;/a&gt; and the local chapter leaders have been exceptionally busy getting everything organised for this years show, in fact, they were already planning it at last years conference in Rome!&lt;/p&gt;
+
+&lt;p&gt;This is a great week long conference featuring three days of instructor lead training (which I highly recommend) as well as two days of talks. These talks are from industry leaders in web security research, and if your company has so much as web connection you are at risk from a massive list of ever growing vulnerabilities and hacks. &lt;/p&gt;
+
+&lt;p&gt;In my opinion, every technology company in Belfast should be sending staff members to this. I went last year and attended a day of instructor lead training on securing Javascript web based applications which was very informative as well as attended the two days of talks.&lt;/p&gt;
+
+&lt;p&gt;For a sneak peak of what you could be seeing, please come to the next &lt;a href=&#34;https://www.meetup.com/OWASP-Belfast/events/236972292/&#34;&gt;OWasp chapter meetup in Belfast&lt;/a&gt;, these are free events held every few months with free pizza and drinks. The next talk will be about Pen testing poorly implemented https, the impacts of not using https &amp;amp; Security Systems.&lt;/p&gt;
+
+&lt;p&gt;Also, you can view the videos of &lt;a href=&#34;https://www.youtube.com/watch?v=qrTShcOW8kM&amp;amp;list=PLpr-xdpM8wG-Kf1_BOnT2LFZU8_SXfpKL&#34;&gt;AppSec Europe 2016 on YouTube&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope to see you there!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Adding SSL to HMail with SSL For Free</title>

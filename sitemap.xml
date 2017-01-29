@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.azert.co.uk/post/appsec-europe-2017-comes-to-belfast/</loc>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.azert.co.uk/post/adding-ssl-to-hmail-with-ssl-for-free/</loc>
     <lastmod>2017-01-25T13:05:31+00:00</lastmod>
   </url>
@@ -34,12 +39,18 @@
   
   <url>
     <loc>http://www.azert.co.uk/</loc>
-    <lastmod>2017-01-25T13:05:31+00:00</lastmod>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.azert.co.uk/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/categories/events/</loc>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,7 +62,7 @@
   
   <url>
     <loc>http://www.azert.co.uk/post/</loc>
-    <lastmod>2017-01-25T13:05:31+00:00</lastmod>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
     <priority>0</priority>
   </url>
   
