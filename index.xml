@@ -7,8 +7,109 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Azert Software 2017</copyright>
-    <lastBuildDate>Mon, 23 Jan 2017 21:45:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jan 2017 13:05:31 +0000</lastBuildDate>
     <atom:link href="http://www.azert.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adding SSL to HMail with SSL For Free</title>
+      <link>http://www.azert.co.uk/post/adding-ssl-to-hmail-with-ssl-for-free/</link>
+      <pubDate>Wed, 25 Jan 2017 13:05:31 +0000</pubDate>
+      
+      <guid>http://www.azert.co.uk/post/adding-ssl-to-hmail-with-ssl-for-free/</guid>
+      <description>
+
+&lt;h1 id=&#34;what-is-ssl-for-free&#34;&gt;What is SSL For Free&lt;/h1&gt;
+
+&lt;p&gt;I&lt;span style=&#34;letter-spacing: 0.01em;&#34;&gt; run a private mail server on using a t1.micro Windows server on AWS using HMail as the mail server. This serves my @azert.co.uk emails and so far has proved to be extremely reliable, despite the small size of the server. I was running an m3.medium at one stage but it cost a fortune so that didn&amp;rsquo;t last very long!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the prerequisites for the mail server I had was SSL support, for obvious reasons of security, but I didn&amp;rsquo;t want to spend even more money on certificates. This is where &lt;a href=&#34;https://www.sslforfree.com/&#34;&gt;SSL For Free&lt;/a&gt; comes in. SSL For Free is essentially a web interface over &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Lets Encrypt&lt;/a&gt; that simplifies creating SSL certificates somewhat. There is a bit of a catch though, while the certificates are free, you do need to renew them, currently this is every 90 days. When you setup an SSL For Free account they will email you in advance of the expiry, so you can take action, there are also programs available that will auto renew for you such as &lt;a href=&#34;https://github.com/Lone-Coder/letsencrypt-win-simple&#34;&gt;LetsEncrypt Win Simple&lt;/a&gt;. Win Simple will also perform all certificate generation etc automatically, so if you can, I would advise using that, unfortunately I couldn&amp;rsquo;t use this as my www.azert.co.uk address points to this site and I didn&amp;rsquo;t want to pollute the site with ACME validation pages (more on this later).&lt;/p&gt;
+
+&lt;h1 id=&#34;setting-up-ssl-for-free&#34;&gt;Setting Up SSL For Free&lt;/h1&gt;
+
+&lt;p&gt;Firstly navigate to &lt;a href=&#34;https://www.sslforfree.com/&#34;&gt;SSL For Free&lt;/a&gt; and setup an account, this will then be used to email you for notifications of expiry &amp;amp; you can renew your existing certificates without having to repeat the below steps.&lt;/p&gt;
+
+&lt;p&gt;Once you have an account, go to the homepage and enter the domain you wish to setup with SSL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/29/Setup-Domain.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;validating-you-own-the-domain&#34;&gt;Validating You Own The Domain&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/29/Validation-options.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When you click &amp;lsquo;Create Free SSL Certificate&amp;rsquo; you will be taken to the above page. There are 3 options available, each with a description. If you are able to use LetsEncrypt Win Simple then just ignore these steps and use it, it&amp;rsquo;s by far the easiest option. For this guide I used the 3rd option as I couldn&amp;rsquo;t use the manual verification option on my server and had access to the dns through Route 53, provided by Amazon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/29/Manually%20verify.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have verified you own the domain carry on.&lt;/p&gt;
+
+&lt;h1 id=&#34;copying-to-your-mail-server&#34;&gt;Copying To Your Mail Server&lt;/h1&gt;
+
+&lt;p&gt;Now you have verified you will be taken to a screen with 3 text areas, each representing a different certificate:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Certificate&lt;/li&gt;
+&lt;li&gt;Private Key&lt;/li&gt;
+&lt;li&gt;CA Bundle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On your Mail Server you will need to create 2 files:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;private.key&lt;/li&gt;
+&lt;li&gt;bundle.crt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can call them anything but this keeps their purpose clear.&lt;/p&gt;
+
+&lt;p&gt;In private.key copy the Private Key text area contents into the file and save.&lt;/p&gt;
+
+&lt;p&gt;In the bundle.crt you will need to copy the entire contents of the text areas in order, to create a &lt;a href=&#34;https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/&#34;&gt;certificate chain&lt;/a&gt; without this chain of trust the LetsEcnrypt certificates will not validate. The order they should appear in bundle.crt is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Private Key&lt;/li&gt;
+&lt;li&gt;Certificate&lt;/li&gt;
+&lt;li&gt;CA Bundle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The final step is to setup hMail to use these certificate files.&lt;/p&gt;
+
+&lt;h1 id=&#34;hmail-ssl-setup&#34;&gt;hMail SSL Setup&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/29/SSLSetup.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Open hMail admin and go to Advanced -&amp;gt; SSL Certificates and create a new certificate giving it any name you wish. In the Certificate File field then select the bundle.crt file you created earlier. Then in the Private key file field select the private.key file you also created and click &lt;strong&gt;Save&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now you will need to setup the Ports to reference the new Certificate you have created within hMail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/29/PortSetup.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Staying in the Advanced section, open &lt;strong&gt;TCP/IP ports&lt;/strong&gt; and for each select SSL/TLS and choose the certifacte you have created. Click &lt;strong&gt;Save&lt;/strong&gt; for each one.&lt;/p&gt;
+
+&lt;p&gt;THe final step is to test it, go to Utilities -&amp;gt; Diagnostics and ensure that connectivity can be achieved.&lt;/p&gt;
+
+&lt;h1 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h1&gt;
+
+&lt;p&gt;To test your setup and where you may have gone wrong the following are some useful tools:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mxtoolbox.com/&#34;&gt;MxLookup&lt;/a&gt; - used for testing your domain setup &amp;amp; forwarding etc is correct&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.sslshopper.com/ssl-checker.html&#34;&gt;SSLChecker&lt;/a&gt; - to validate your ssl certs&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://slproweb.com/products/Win32OpenSSL.html&#34;&gt;OpenSSL WIndows&lt;/a&gt; - diagnostics tool I found useful when diagnosing why the SSLForFree certificate wasn&amp;rsquo;t validating (it needed the certificate chain)&lt;/p&gt;
+
+&lt;h1 id=&#34;renewing&#34;&gt;Renewing&lt;/h1&gt;
+
+&lt;p&gt;When you get the email advising you to renew, log into &lt;a href=&#34;https://www.sslforfree.com/&#34;&gt;SSL For Free&lt;/a&gt;, you will then be taken to a page showing you existing certificates&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.azert.co.uk/uploads/2017/01/25/SSL-certs.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click renew and follow the steps taken earlier to validate your certificate, once re validated you won&amp;rsquo;t need to take any more steps, if you have let it expire, you will need to follow the steps again to create the certificate chain and copy to your mail server.&lt;/p&gt;
+
+&lt;p&gt;#Finally&lt;/p&gt;
+
+&lt;p&gt;If you found this useful or have any further points to add or if I&amp;rsquo;ve missed anything, leave a comment below and I&amp;rsquo;ll get back to you.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Azert delivers NiMicrolights website</title>
