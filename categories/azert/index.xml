@@ -2,19 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azert on Azert Software</title>
-    <link>http://azert-software.github.io/categories/azert/index.xml</link>
+    <link>http://www.azert.co.uk/categories/azert/index.xml</link>
     <description>Recent content in Azert on Azert Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Azert Software 2017</copyright>
-    <atom:link href="http://azert-software.github.io/categories/azert/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.azert.co.uk/categories/azert/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Azert delivers NiMicrolights website</title>
+      <link>http://www.azert.co.uk/post/azert-delivers-nimicrolights-co-uk/</link>
+      <pubDate>Mon, 23 Jan 2017 21:45:06 +0000</pubDate>
+      
+      <guid>http://www.azert.co.uk/post/azert-delivers-nimicrolights-co-uk/</guid>
+      <description>&lt;p&gt;I have created a new website for local microlight training school &lt;a href=&#34;www.nimicrolights.co.uk&#34;&gt;NiMicrolights.co.uk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A full write up of the project can be found over at the project page via the following &lt;a href=&#34;http://www.azert.co.uk/project/nimicrolights-website/&#34;&gt;link&lt;/a&gt; . This was a really enjoyable project for me, aircraft and flying being a real passion of mine. I managed this entire project in the evenings over about 5 nights!&lt;/p&gt;
+
+&lt;p&gt;It is built using the same tech stack as this blog:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;Forestry.io&lt;/li&gt;
+&lt;li&gt;GitHub Pages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This stack is such a breeze to use I&amp;rsquo;m hoping to use it in many more projects in the future. Do get in touch if there is a web project you&amp;rsquo;d like to discuss!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Welcome to Azert</title>
-      <link>http://azert-software.github.io/post/intro-to-azert/</link>
+      <link>http://www.azert.co.uk/post/intro-to-azert/</link>
       <pubDate>Sat, 14 Jan 2017 21:00:31 +0000</pubDate>
       
-      <guid>http://azert-software.github.io/post/intro-to-azert/</guid>
+      <guid>http://www.azert.co.uk/post/intro-to-azert/</guid>
       <description>
 
 &lt;p&gt;Azert is a new blog by Software Developer Mark Smith who lives in Northern Ireland.&lt;/p&gt;

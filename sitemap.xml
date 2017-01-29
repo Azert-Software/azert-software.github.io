@@ -2,35 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://azert-software.github.io/about/</loc>
+    <loc>http://www.azert.co.uk/post/appsec-europe-2017-comes-to-belfast/</loc>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/post/adding-ssl-to-hmail-with-ssl-for-free/</loc>
+    <lastmod>2017-01-25T13:05:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/post/azert-delivers-nimicrolights-co-uk/</loc>
+    <lastmod>2017-01-23T21:45:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/project/nimicrolights-website/</loc>
+    <lastmod>2017-01-23T13:49:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/about/</loc>
     <lastmod>2017-01-14T21:00:31+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://azert-software.github.io/post/intro-to-azert/</loc>
+    <loc>http://www.azert.co.uk/post/intro-to-azert/</loc>
     <lastmod>2017-01-14T21:00:31+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://azert-software.github.io/categories/azert/</loc>
-    <lastmod>2017-01-14T21:00:31+00:00</lastmod>
+    <loc>http://www.azert.co.uk/categories/azert/</loc>
+    <lastmod>2017-01-23T21:45:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://azert-software.github.io/</loc>
-    <lastmod>2017-01-14T21:00:31+00:00</lastmod>
+    <loc>http://www.azert.co.uk/</loc>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://azert-software.github.io/categories/</loc>
+    <loc>http://www.azert.co.uk/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://azert-software.github.io/post/</loc>
-    <lastmod>2017-01-14T21:00:31+00:00</lastmod>
+    <loc>http://www.azert.co.uk/categories/events/</loc>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/categories/hmail/</loc>
+    <lastmod>2017-01-25T13:05:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/post/</loc>
+    <lastmod>2017-01-29T21:37:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/tags/project/</loc>
+    <lastmod>2017-01-23T13:49:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/project/</loc>
+    <lastmod>2017-01-23T13:49:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.azert.co.uk/tags/website/</loc>
+    <lastmod>2017-01-23T13:49:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
